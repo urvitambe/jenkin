@@ -12,7 +12,6 @@ pipeline {
         stage('unit testing') {
           steps {
             echo 'testing '
-            bat 'cd C:\\Users\\URVI\\OneDrive\\Desktop'
           }
         }
 
