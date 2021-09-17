@@ -9,9 +9,10 @@ pipeline {
 
     stage('Test ') {
       parallel {
-        stage('Test ') {
+        stage('unit testing') {
           steps {
             echo 'testing '
+            sh 'echo unit testing'
           }
         }
 
