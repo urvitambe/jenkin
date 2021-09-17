@@ -12,7 +12,7 @@ pipeline {
         stage('unit testing') {
           steps {
             echo 'testing '
-            sh 'echo unit testing'
+            bat 'cd C:\\Users\\URVI\\OneDrive\\Desktop'
           }
         }
 
