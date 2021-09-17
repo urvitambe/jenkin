@@ -7,17 +7,17 @@ pipeline {
       }
     }
 
-    stage('Test') {
+    stage('Test ') {
       parallel {
-        stage('Test') {
+        stage('Test ') {
           steps {
-            sh 'echo "test the job"'
+            echo 'testing '
           }
         }
 
-        stage('Test Done') {
+        stage('Test2') {
           steps {
-            echo 'test done'
+            echo 'testing done'
           }
         }
 
