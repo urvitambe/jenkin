@@ -8,15 +8,25 @@ pipeline {
     }
 
     stage('Test') {
-      steps {
-        build 'first job'
-        sh 'echo "Here the job is built in blue ocean"'
+      parallel {
+        stage('Test') {
+          steps {
+            sh 'echo "test the job"'
+          }
+        }
+
+        stage('Test Done') {
+          steps {
+            echo 'test done'
+          }
+        }
+
       }
     }
 
     stage('deploy') {
       steps {
-        echo 'deployment stage'
+        echo 'done'
       }
     }
 
